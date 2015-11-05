@@ -1,0 +1,37 @@
+
+<html>
+  <head>
+    <title>JavaScript Instantiation type profiler for Stacks and Queues</title>
+    <script src='./index.js'></script>
+    <script src="jquery.js"></script>
+    <script src='./functional/queue.js'></script>
+    <script src='./functional/stack.js'></script>
+  </head>
+<body>
+
+
+
+  <script>
+  $(document).ready(function() {
+
+    //set up some large queues
+    var q1 = Queue();
+    for (var i =0; i < 10000000; i++) {
+      q1.enqueue(i);
+    }
+
+    for (var i =0; i < 10000000; i++) {
+      q1.dequeue(i);
+    }
+
+    //preallocate a billion numbers
+
+    console.log("done");
+    //console.log(q1.size());
+
+     // console.log(q1.dequeue);
+
+  });
+  </script>
+
+</html>
