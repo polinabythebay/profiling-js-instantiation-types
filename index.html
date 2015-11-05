@@ -2,14 +2,22 @@
 <html>
   <head>
     <title>JavaScript Instantiation type profiler for Stacks and Queues</title>
-    <script src='./index.js'></script>
+
     <script src="jquery.js"></script>
     <script src='./functional/queue.js'></script>
     <script src='./functional/stack.js'></script>
+
+    <script src='./functional-shared/queue.js'></script>
+    <script src='./functional-shared/stack.js'></script>
+
+    <script src='./prototypal/queue.js'></script>
+    <script src='./prototypal/stack.js'></script>
+
+    <script src='./pseudoclassical/queue.js'></script>
+    <script src='./psuedoclassical/stack.js'></script>
+
   </head>
 <body>
-
-
 
   <script>
   $(document).ready(function() {
@@ -23,7 +31,7 @@
     for (var i =0; i < 10000000; i++) {
       q1.dequeue(i);
     }
-
+    
     //preallocate a billion numbers
 
     console.log("done");
